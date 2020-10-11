@@ -23,3 +23,4 @@
 - バッチノーマライゼーションが何かを調べ，確認する必要あり．
 
 ### 3.2まで既読
+We suspect that these benefits occur primarily because long utterances tend to have larger gradients, yet we use a fixed learning rate independent of utterance length. Furthermore, longer utterances are more likely to cause the internal state of the RNNs to explode at an early stage in training.
