@@ -30,19 +30,3 @@ iptables -P OUTPUT ACCEPT
 iptables -A INPUT -p tcp --dport 2049 -j DROP
 
 iptables -A INPUT -s 対象IPアドレス/マスク -m state --state NEW -p tcp --dport 2049 -j ACCEPT
-
-### FTPで接続できるIPアドレスの制限
-\# vi /etc/hosts.deny\
-vsftpd: ALL
-
-\# vi /etc/hosts.allow\
-vsftpd: 対象のIPアドレス
-
-### 設定の反映
-マシンの起動時に自動反映するように設定\
-\# chkconfig vsftpd on
-
-手動で実行・停止・再起動の方法\
-\# /etc/rc.d/init.d/vsftpd start\
-\# /etc/rc.d/init.d/vsftpd stop\
-\# /etc/rc.d/init.d/vsftpd restart\
