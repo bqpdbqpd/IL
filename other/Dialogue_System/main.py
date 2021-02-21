@@ -34,7 +34,7 @@ def sentense_ave_vec(sentense):
 
 
 if __name__ == '__main__':
-    # しろやぎコーポレーションが後悔してくれている分散表現
+    # しろやぎコーポレーションが公開してくれている分散表現
     #w2v_model = word2vec.Word2Vec.load('data/latest-ja-word2vec-gensim-model/word2vec.gensim.model')
     # fatstext 読み込みに１０分程度かかる
     w2v_model = KeyedVectors.load_word2vec_format('data/cc.ja.300.vec')
