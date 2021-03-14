@@ -11,7 +11,7 @@ class AimlSystem:
 
     def initial_message(self):
         # aiml.xmlを読み込む
-        self.kernel.learn("aiml.xml")
+        self.kernel.learn("data/aiml.xml")
         return {'utt':'はじめまして，雑談を始めましょう', 'end':False}
 
     def reply(self, dic_input):
